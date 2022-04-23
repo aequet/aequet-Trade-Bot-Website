@@ -8,7 +8,7 @@ function Navbar() {
           <Link href="/">
             <h1 className="text-3xl font-bold cursor-pointer">AETB V2</h1>
           </Link>
-          <div className="hidden gap-6 pr-32 md:flex">
+          <div className="hidden gap-6 pr-16 md:flex">
             <Link href="https://discord.gg/aetb">
               <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
                 Discord
