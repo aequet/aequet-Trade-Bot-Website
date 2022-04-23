@@ -1,22 +1,9 @@
-import Link from "next/link";
+import Navbar from "../components/navbar";
 
 export default function Terms() {
   return (
     <>
-      <nav className="mt-8 px-20">
-        <div className="flex justify-between">
-          <Link href="/">
-            <h1 className="text-3xl cursor-pointer font-bold">AETB V2</h1>
-          </Link>
-          <div className=" gap-6  flex">
-            <Link href="/">
-              <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
-                Home
-              </button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
       <div className="mt-14 flex flex-col place-items-center p-6">
         <div className="w-full max-w-5xl rounded-lg  text-white">
           <h2 className="text-3xl font-bold">Changelog - V2.0.0</h2>

@@ -3,9 +3,9 @@ export default function error() {
     <>
       <div className="flex h-screen items-center justify-center	p-4 text-white">
         <div className="rounded-lg bg-polar-200 p-6 text-center">
-          <h1 className="text-left text-3xl font-bold">404 - Unavailable</h1>
+          <h1 className="text-left text-3xl font-bold">404 - Not found</h1>
           <p className=" text-left text-gray-300">
-            it looks like the page you are looking for is unavailable
+            It seems like the page you are looking for does not exist.
           </p>
           <div className="text-left">
             <button

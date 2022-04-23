@@ -10,5 +10,18 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px #3f3f46;
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1f1e20;
 }
