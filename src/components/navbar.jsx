@@ -3,7 +3,7 @@ import Link from "next/link";
 function Navbar() {
   return (
     <>
-      <nav className="mt-8 px-20">
+      <nav className="mt-8 px-6 md:px-20">
         <div className="flex justify-between">
           <Link href="/">
             <h1 className="text-3xl font-bold cursor-pointer">AETB V2</h1>
