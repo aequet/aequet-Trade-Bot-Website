@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
 import Navbar from "../components/navbar";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
