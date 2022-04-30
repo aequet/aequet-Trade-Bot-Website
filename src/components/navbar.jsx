@@ -97,10 +97,10 @@ function Navbar() {
 
                       <div className="pl-4">
                         <li className="text-sm text-gray-200 font-semibold">
-                          $50 via paypal/BTC/ETH
+                          $60 via paypal/BTC/ETH
                         </li>
                         <li className="text-sm text-gray-200 font-semibold">
-                          35k in roblox limited items.
+                          40k in roblox limited items.
                         </li>
                       </div>
                     </div>
