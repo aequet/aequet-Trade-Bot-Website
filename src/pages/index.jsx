@@ -88,12 +88,12 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col">
                   <div>
-                    <span className="text-2xl">❝</span> Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Inventore error adipisci,
-                    quaerat provident minus quasi repellat eaque voluptate
-                    veniam? Doloribus accusantium ex ducimus delectus, ipsam
-                    sunt commodi consectetur veniam modi.{" "}
-                    <span className="text-2xl">❞</span>
+                    <span className="text-2xl">❝</span> Aequet trade bot is a
+                    popular trade bot rising in popularity and i have been using
+                    it for a while now and would recommend it to anyone getting
+                    into roblox trade botting as the discord is friendly as well
+                    as many helpers who love to provide their knowledge to help
+                    you get started. <span className="text-2xl">❞</span>
                   </div>
                   <div className="mt-3 md:flex hidden text-bold text-2xl">
                     - NahSahh
