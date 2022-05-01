@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Navbar from "../components/navbar";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
@@ -13,6 +12,16 @@ function Navbar() {
   function openModal() {
     setIsOpen(true);
   }
+
+  let [isNav, setIsNav] = useState(false);
+
+  function closeNav() {
+    setIsNav(false);
+  }
+
+  function openNav() {
+    setIsNav(true);
+  }
   return (
     <>
       <nav className="mt-8 px-6 md:px-20">
@@ -20,24 +29,43 @@ function Navbar() {
           <Link href="/">
             <h1 className="text-3xl font-bold cursor-pointer">AETB V2</h1>
           </Link>
-          <div className="hidden gap-6 pr-16 md:flex">
-            <Link href="https://discord.gg/aetb">
-              <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
-                Discord
+          <div>
+            <div className="hidden md:flex gap-6 pr-16">
+              <Link href="https://discord.gg/aetb">
+                <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
+                  Discord
+                </button>
+              </Link>
+              <Link href="/changelog">
+                <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
+                  Changelogs
+                </button>
+              </Link>
+              <button
+                type="button"
+                onClick={openModal}
+                className="bg-blue-600 h-9 w-24 hover:bg-blue-700 p-2 rounded transform active:scale-90 duration-300"
+              >
+                Buy Now
               </button>
-            </Link>
-            <Link href="/changelog">
-              <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
-                Changelogs
+            </div>
+            <div className="md:hidden flex">
+              <button onClick={openNav} className="p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#ffffff"
+                  class="h-5 w-5"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
               </button>
-            </Link>
-            <button
-              type="button"
-              onClick={openModal}
-              className="bg-blue-600 h-9 w-24 hover:bg-blue-700 p-2 rounded transform active:scale-90 duration-300"
-            >
-              Buy Now
-            </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -155,6 +183,86 @@ function Navbar() {
                           Discord
                         </button>
                       </div>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </div>
+
+      {/* Mobile Nav modal */}
+      <div>
+        <Transition appear show={isNav} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeNav}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className=" ml-auto h-full w-72 min-h-screen text-white transform overflow-hidden bg-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
+                    <div className="text-white">
+                      <div className="flex justify-between">
+                        <h1 className="text-white text-2xl">
+                          Aequet Trade Bot
+                        </h1>
+                        <button
+                          className="text-white text-2xl rounded-lg transform active:scale-90 duration-300 hover:bg-opacity-0"
+                          onClick={closeNav}
+                        >
+                          <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center mt-4 gap-2">
+                      <Link href="https://discord.gg/aetb">
+                        <button className="h-8 text-xl w-full hover:bg-zinc-800/25 duration-300 bg-zinc-800/50 rounded-lg text-gray-200 hover:text-gray-300">
+                          Discord
+                        </button>
+                      </Link>
+                      <Link href="/changelog">
+                        <button className="h-8 text-xl w-full hover:bg-zinc-800/25 duration-300 bg-zinc-800/50 rounded-lg text-gray-200 hover:text-gray-300">
+                          Changelogs
+                        </button>
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={openModal}
+                        className="bg-blue-600 mt-6 h-9 w-full hover:bg-blue-700 p-2 rounded transform active:scale-90 duration-300"
+                      >
+                        Buy Now
+                      </button>
                     </div>
                   </Dialog.Panel>
                 </Transition.Child>
