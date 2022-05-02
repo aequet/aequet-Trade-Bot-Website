@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <>
       <div>
-        <nav className="mt-8 md:px-20 flex">
+        <nav className="mt-8 mb-20 md:px-20 flex">
           <Link href="/">
             <h1 className="text-3xl px-6 font-bold cursor-pointer absolute">
               AETB V2
