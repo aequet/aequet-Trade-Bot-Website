@@ -16,11 +16,9 @@ function Navbar() {
   return (
     <>
       <div>
-        <nav className="mt-8 mb-20 md:px-20 flex">
+        <nav className="mt-8 md:px-20 flex">
           <Link href="/">
-            <h1 className="text-3xl px-6 font-bold cursor-pointer absolute">
-              AETB V2
-            </h1>
+            <h1 className="text-3xl px-6 font-bold cursor-pointer">AETB V2</h1>
           </Link>
           <div className="hidden md:flex gap-6 pr-16 ml-auto">
             <Link href="https://discord.gg/aetb">
@@ -41,7 +39,7 @@ function Navbar() {
               Buy Now
             </button>
           </div>
-          <div className="text-white md:hidden w-full flex">
+          <div className="text-white md:hidden absolute w-full flex">
             {/* Mobile navigator */}
             <Disclosure className="z-40 flex" as="div">
               <div className="absolute right-0 mr-4">
@@ -55,7 +53,7 @@ function Navbar() {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillrule="evenodd"
                       d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
                     />
                   </svg>
