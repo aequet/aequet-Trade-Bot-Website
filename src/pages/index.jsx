@@ -1,5 +1,7 @@
+import Card from "../components/card";
 import Navbar from "../components/navbar";
 import { Fragment, useState } from "react";
+import Testimony from "../components/testimony";
 import { Dialog, Transition } from "@headlessui/react";
 
 export default function Home() {
@@ -75,81 +77,41 @@ export default function Home() {
           <div className="mt-8">
             <h1 className="text-3xl font-bold">Our buyers say</h1>
             <div className="text-white md:flex flex-col gap-4 lg:flex-row">
-              <div className="flex md:flex-row flex-col w-full lg:max-w-2xl mt-6 gap-4 duration-300 sm:hover:bg-zinc-800/50 sm:bg-zinc-800 rounded-lg p-4">
-                <div className="flex sm:flex-row flex-col sm:m-0 mx-auto">
-                  <img
-                    src="https://cdn.discordapp.com/emojis/689856270269808664.gif?size=96&quality=lossless"
-                    alt=""
-                    className="rounded-full w-24 h-24 mt-4 sm:m-0 mx-auto"
-                  />
-                  <div className="sm:mt-10 mt-6 md:invisible text-bold text-2xl sm:ml-auto">
-                    NahSahh
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <div>
-                    <span className="text-2xl">❝</span> Aequet trade bot is a
-                    popular trade bot rising in popularity and i have been using
-                    it for a while now and would recommend it to anyone getting
-                    into roblox trade botting as the discord is friendly as well
-                    as many helpers who love to provide their knowledge to help
-                    you get started. <span className="text-2xl">❞</span>
-                  </div>
-                  <div className="mt-3 md:flex hidden text-bold text-2xl">
-                    - NahSahh
-                  </div>
-                </div>
-              </div>
-              <div className="flex md:flex-row flex-col w-full lg:max-w-2xl mt-6 gap-4 duration-300 sm:hover:bg-zinc-800/50 sm:bg-zinc-800 rounded-lg p-4">
-                <div className="flex sm:flex-row flex-col sm:m-0 mx-auto">
-                  <img
-                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75bff394-4f86-45a8-a923-e26223aa74cb/de901o7-d61b3bfb-f1b1-453b-8268-9200130bbc65.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1YmZmMzk0LTRmODYtNDVhOC1hOTIzLWUyNjIyM2FhNzRjYlwvZGU5MDFvNy1kNjFiM2JmYi1mMWIxLTQ1M2ItODI2OC05MjAwMTMwYmJjNjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aEck9OnRf_XJzrEzZNvrGS2XpAlo2ixuxoAX5fgpNnw"
-                    alt=""
-                    className="rounded-full w-24 h-24 mt-4 sm:m-0 mx-auto"
-                  />
-                  <div className="sm:mt-10 mt-6 md:invisible text-bold text-2xl sm:ml-auto">
-                    NahSahh
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <div>
-                    <span className="text-2xl">❝</span> Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Inventore error adipisci,
-                    quaerat provident minus quasi repellat eaque voluptate
-                    veniam? Doloribus accusantium ex ducimus delectus, ipsam
-                    sunt commodi consectetur veniam modi.{" "}
-                    <span className="text-2xl">❞</span>
-                  </div>
-                  <div className="mt-3 md:flex hidden text-bold text-2xl">
-                    - NahSahh
-                  </div>
-                </div>
-              </div>
-              <div className="flex md:flex-row flex-col w-full lg:max-w-2xl mt-6 gap-4 duration-300 sm:hover:bg-zinc-800/50 sm:bg-zinc-800 rounded-lg p-4">
-                <div className="flex sm:flex-row flex-col sm:m-0 mx-auto">
-                  <img
-                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75bff394-4f86-45a8-a923-e26223aa74cb/de901o7-d61b3bfb-f1b1-453b-8268-9200130bbc65.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1YmZmMzk0LTRmODYtNDVhOC1hOTIzLWUyNjIyM2FhNzRjYlwvZGU5MDFvNy1kNjFiM2JmYi1mMWIxLTQ1M2ItODI2OC05MjAwMTMwYmJjNjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aEck9OnRf_XJzrEzZNvrGS2XpAlo2ixuxoAX5fgpNnw"
-                    alt=""
-                    className="rounded-full w-24 h-24 mt-4 sm:m-0 mx-auto"
-                  />
-                  <div className="sm:mt-10 mt-6 md:invisible text-bold text-2xl sm:ml-auto">
-                    NahSahh
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <div>
-                    <span className="text-2xl">❝</span> Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Inventore error adipisci,
-                    quaerat provident minus quasi repellat eaque voluptate
-                    veniam? Doloribus accusantium ex ducimus delectus, ipsam
-                    sunt commodi consectetur veniam modi.{" "}
-                    <span className="text-2xl">❞</span>
-                  </div>
-                  <div className="mt-3 md:flex hidden text-bold text-2xl">
-                    - NahSahh
-                  </div>
-                </div>
-              </div>
+              <Testimony
+                pfp="https://cdn.discordapp.com/emojis/689856270269808664.gif?size=96&quality=lossless"
+                user="NahSahh"
+                testimony="Aequet trade bot is a popular trade bot rising in popularity and i have been using it for a while now and would recommend it to anyone getting into roblox trade botting as the discord is friendly as well as many helpers who love to provide their knowledge to help you get started."
+              />
+              <Testimony
+                pfp="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75bff394-4f86-45a8-a923-e26223aa74cb/de901o7-d61b3bfb-f1b1-453b-8268-9200130bbc65.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1YmZmMzk0LTRmODYtNDVhOC1hOTIzLWUyNjIyM2FhNzRjYlwvZGU5MDFvNy1kNjFiM2JmYi1mMWIxLTQ1M2ItODI2OC05MjAwMTMwYmJjNjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aEck9OnRf_XJzrEzZNvrGS2XpAlo2ixuxoAX5fgpNnw"
+                user="placeholder"
+                testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error adipisci, quaerat provident minus quasi repellat eaque voluptate veniam? Doloribus accusantium ex ducimus delectus, ipsam sunt commodi consectetur veniam modi."
+              />
+              <Testimony
+                pfp="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75bff394-4f86-45a8-a923-e26223aa74cb/de901o7-d61b3bfb-f1b1-453b-8268-9200130bbc65.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1YmZmMzk0LTRmODYtNDVhOC1hOTIzLWUyNjIyM2FhNzRjYlwvZGU5MDFvNy1kNjFiM2JmYi1mMWIxLTQ1M2ItODI2OC05MjAwMTMwYmJjNjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aEck9OnRf_XJzrEzZNvrGS2XpAlo2ixuxoAX5fgpNnw"
+                user="Placeholder"
+                testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error adipisci, quaerat provident minus quasi repellat eaque voluptate veniam? Doloribus accusantium ex ducimus delectus, ipsam sunt commodi consectetur veniam modi."
+              />
+            </div>
+            <div className="flex justify-center gap-8 mt-24">
+              <Card
+                pfp="https://cdn.discordapp.com/emojis/689856270269808664.gif?size=96&quality=lossless"
+                status="Contributor"
+                role="Lorem ipsum dipsum dolor sit"
+                user="Lorem"
+              />
+              <Card
+                pfp="https://cdn.discordapp.com/avatars/587698762470916096/fb2cd750e86ce0783875509eff8fd02a.webp"
+                status="Developer"
+                role="Founder & developer of Aetb"
+                user="Aequet"
+              />
+              <Card
+                pfp="https://cdn.discordapp.com/emojis/689856270269808664.gif?size=96&quality=lossless"
+                status="Contributor"
+                role="Lorem ipsum dipsum dolor sit"
+                user="Lorem"
+              />
             </div>
           </div>
         </div>

@@ -49,7 +49,7 @@ function Navbar() {
                     width="16"
                     height="16"
                     fill="#ffffff"
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     viewBox="0 0 16 16"
                   >
                     <path
