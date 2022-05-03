@@ -1,7 +1,7 @@
 const Testimony = ({ user = "", testimony = "", pfp = "" }) => {
   return (
     <>
-      <div className="flex md:flex-row flex-col w-full lg:max-w-2xl mt-6 gap-4 duration-300 sm:hover:bg-zinc-800/50 sm:bg-zinc-800 rounded-lg p-4">
+      <div className="flex flex-col w-full lg:max-w-2xl mt-6 gap-4 duration-300 sm:hover:bg-zinc-800/50 sm:bg-zinc-800 rounded-lg p-4">
         <div className="flex sm:flex-row flex-col sm:m-0 mx-auto">
           <img
             src={pfp}

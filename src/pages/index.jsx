@@ -93,7 +93,7 @@ export default function Home() {
                 testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error adipisci, quaerat provident minus quasi repellat eaque voluptate veniam? Doloribus accusantium ex ducimus delectus, ipsam sunt commodi consectetur veniam modi."
               />
             </div>
-            <div className="flex justify-center gap-8 mt-24">
+            <div className="flex mt-24 justify-center gap-10 flex-col md:flex-row">
               <Card
                 pfp="https://cdn.discordapp.com/emojis/689856270269808664.gif?size=96&quality=lossless"
                 status="Contributor"

@@ -12,9 +12,7 @@ const card = ({ user = "", status = "", role = "", pfp = "" }) => {
             className="rounded-t-lg h-56 w-full border-b-2"
           />
           <div className="p-4">
-            <div className="flex justify-between">
-              <p className="font-semibold text-xl">{user}</p>
-            </div>
+            <p className="font-semibold text-xl">{user}</p>
             <div className="text-gray-300 mt-2">{role}</div>
           </div>
         </div>
