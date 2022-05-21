@@ -27,11 +27,11 @@ export default function Home() {
               strategised trades to users across the Roblox platform.
             </p>
           </div>
-          <div className="flex md:flex-row mt-4 flex-col items-center">
+          <div className="flex md:flex-row mt-4 flex-col md:items-center">
             <button
               type="button"
               onClick={openModal}
-              className="bg-blue-600 px-4 hover:bg-blue-700 p-1 rounded transform active:scale-90 duration-300"
+              className="bg-blue-600 w-28 hover:bg-blue-700 p-1 rounded transform active:scale-90 duration-300"
             >
               Buy Now
             </button>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-14 flex">
-          <div className="ml-auto md:mr-14">
+          <div className="md:ml-auto md:mr-14">
             <div className="prose text-white">
               <h1 className="text-white text-3xl">Easily Accessible</h1>
               <p>
@@ -73,7 +73,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="flex pb-12 md:ml-24 mt-24 border-t-2 border-t-zinc-800">
+        <div className="flex pb-12 lg:ml-24 mt-24 border-t-2 border-t-zinc-800">
           <div className="mt-8">
             <h1 className="text-3xl font-bold">Our buyers say</h1>
             <div className="text-white md:flex flex-col gap-4 lg:flex-row">
@@ -143,10 +143,10 @@ export default function Home() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
-                    <div className="prose text-white">
+                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-lg bg-zinc-900 p-6 text-left align-middle shadow-2xl shadow-zinc-900/70 transition-all">
+                    <div className="text-white">
                       <div className="flex justify-between">
-                        <h1 className="text-white text-2xl">AETB, Purchase</h1>
+                        <h1 className="text-white font-semibold text-2xl">AETB, Purchase</h1>
                         <button
                           className="text-white text-2xl bg-black bg-opacity-25 rounded-lg h-9 p-2 transform active:scale-90 duration-300 hover:bg-opacity-0"
                           onClick={closeModal}
@@ -165,26 +165,26 @@ export default function Home() {
                           </svg>
                         </button>
                       </div>
-                      <p className="text-lg text-white  -mt-3">
+                      <p className="text-lg text-gray-300">
                         AETB, Version 2 has now been released. You can purchase
                         it via the following methods.
                       </p>
 
-                      <div className="pl-4">
-                        <li className="text-sm text-gray-200 font-semibold">
+                      <div className="pl-4 text-gray-300">
+                        <li className="text-sm font-semibold">
                           $60 via paypal/BTC/ETH
                         </li>
-                        <li className="text-sm text-gray-200 font-semibold">
+                        <li className="text-sm font-semibold">
                           40k in roblox limited items.
                         </li>
                       </div>
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-sm text-gray-200 font-bold">
+                      <p className="text-sm text-gray-300 font-bold">
                         Open a ticket in the discord before purchasing.
                       </p>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between items-center mt-3">
                         <div className="flex space-x-2">
                           <a
                             onClick={() =>
@@ -193,7 +193,7 @@ export default function Home() {
                                 "_blank"
                               )
                             }
-                            className="bg-white text-white cursor-pointer mt-3 h-9 p-2 rounded-lg transform active:scale-90 duration-300"
+                            className="bg-zinc-800 hover:bg-white text-white cursor-pointer h-9 p-2 rounded-lg transform active:scale-90 duration-300"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ export default function Home() {
                             </svg>
                           </a>
                           <a
-                            className="bg-white text-white mt-3 h-9 p-2 cursor-pointer rounded-lg transform active:scale-90 duration-300"
+                            className="bg-zinc-800 hover:bg-white text-white h-9 p-2 cursor-pointer rounded-lg transform active:scale-90 duration-300"
                             onClick={() =>
                               window.open("https://aequet.fr", "_blank")
                             }
@@ -225,7 +225,7 @@ export default function Home() {
                             window.open("https://discord.gg/aetb", "_blank")
                           }
                           type="button"
-                          className="bg-indigo-600 text-white mt-3 h-9 w-24 hover:bg-indigo-700 p-2 rounded-lg transform active:scale-90 duration-300"
+                          className="bg-indigo-600 text-white h-8 font-semibold text-sm w-24 hover:bg-indigo-700 rounded transform active:scale-90 duration-300"
                         >
                           Discord
                         </button>

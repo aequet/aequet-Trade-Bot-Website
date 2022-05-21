@@ -39,7 +39,7 @@ function Navbar() {
               Buy Now
             </button>
           </div>
-          <div className="text-white md:hidden absolute w-full flex">
+          <div className="text-white md:hidden absolute w-full flex right-0">
             {/* Mobile navigator */}
             <Disclosure className="z-40 flex" as="div">
               <div className="absolute right-0 mr-4">
@@ -68,23 +68,23 @@ function Navbar() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Disclosure.Panel className="absolute mt-10 w-full bg-zinc-900 border-b-2 border-b-zinc-800 p-3 shadow-2xl">
+                <Disclosure.Panel className="absolute mt-10 w-full bg-zinc-800 border-b-2 border-b-zinc-800 p-3">
                   <div className="flex flex-col gap-3 ml-3">
                     {" "}
                     <Link href="https://discord.gg/aetb">
-                      <button className="text-gray-400 flex text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
+                      <button className="text-gray-400 flex text-sm font-bold active:scale-90 duration-300 hover:text-gray-500">
                         Discord
                       </button>
                     </Link>
                     <Link href="/changelog">
-                      <button className="text-gray-400 text-lg flex font-bold active:scale-90 duration-300 hover:text-gray-500">
+                      <button className="text-gray-400 text-sm flex font-bold active:scale-90 duration-300 hover:text-gray-500">
                         Changelogs
                       </button>
                     </Link>
                     <button
                       type="button"
                       onClick={openModal}
-                      className="bg-blue-600 h-9 w-28 hover:bg-blue-700 p-2 rounded transform active:scale-90 duration-300"
+                      className="bg-blue-600 h-8 font-semibold w-28 hover:bg-blue-700 text-sm rounded transform active:scale-90 duration-300"
                     >
                       Buy Now
                     </button>
@@ -122,10 +122,10 @@ function Navbar() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-zinc-900 p-6 text-left align-middle shadow-xl transition-all">
-                    <div className="prose text-white">
+                  <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-lg bg-zinc-900 p-6 text-left align-middle shadow-2xl shadow-zinc-900/70 transition-all">
+                    <div className="text-white">
                       <div className="flex justify-between">
-                        <h1 className="text-white text-2xl">AETB, Purchase</h1>
+                        <h1 className="text-white font-semibold text-2xl">AETB, Purchase</h1>
                         <button
                           className="text-white text-2xl bg-black bg-opacity-25 rounded-lg h-9 p-2 transform active:scale-90 duration-300 hover:bg-opacity-0"
                           onClick={closeModal}
@@ -144,26 +144,26 @@ function Navbar() {
                           </svg>
                         </button>
                       </div>
-                      <p className="text-lg text-white  -mt-3">
+                      <p className="text-lg text-gray-300">
                         AETB, Version 2 has now been released. You can purchase
                         it via the following methods.
                       </p>
 
-                      <div className="pl-4">
-                        <li className="text-sm text-gray-200 font-semibold">
+                      <div className="pl-4 text-gray-300">
+                        <li className="text-sm font-semibold">
                           $60 via paypal/BTC/ETH
                         </li>
-                        <li className="text-sm text-gray-200 font-semibold">
+                        <li className="text-sm font-semibold">
                           40k in roblox limited items.
                         </li>
                       </div>
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-sm text-gray-200 font-bold">
+                      <p className="text-sm text-gray-300 font-bold">
                         Open a ticket in the discord before purchasing.
                       </p>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between items-center mt-3">
                         <div className="flex space-x-2">
                           <a
                             onClick={() =>
@@ -172,7 +172,7 @@ function Navbar() {
                                 "_blank"
                               )
                             }
-                            className="bg-white text-white cursor-pointer mt-3 h-9 p-2 rounded-lg transform active:scale-90 duration-300"
+                            className="bg-zinc-800 hover:bg-white text-white cursor-pointer h-9 p-2 rounded-lg transform active:scale-90 duration-300"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ function Navbar() {
                             </svg>
                           </a>
                           <a
-                            className="bg-white text-white mt-3 h-9 p-2 cursor-pointer rounded-lg transform active:scale-90 duration-300"
+                            className="bg-zinc-800 hover:bg-white text-white h-9 p-2 cursor-pointer rounded-lg transform active:scale-90 duration-300"
                             onClick={() =>
                               window.open("https://aequet.fr", "_blank")
                             }
@@ -204,7 +204,7 @@ function Navbar() {
                             window.open("https://discord.gg/aetb", "_blank")
                           }
                           type="button"
-                          className="bg-indigo-600 text-white mt-3 h-9 w-24 hover:bg-indigo-700 p-2 rounded-lg transform active:scale-90 duration-300"
+                          className="bg-indigo-600 text-white h-8 font-semibold text-sm w-24 hover:bg-indigo-700 rounded transform active:scale-90 duration-300"
                         >
                           Discord
                         </button>
