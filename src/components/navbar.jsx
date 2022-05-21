@@ -15,26 +15,26 @@ function Navbar() {
 
   return (
     <>
-      <div>
-        <nav className="mt-8 md:px-20 flex">
+      <div className="bg-zinc-800 h-16 p-4">
+        <nav className="md:px-20 flex">
           <Link href="/">
-            <h1 className="text-3xl px-6 font-bold cursor-pointer">AETB V2</h1>
+            <h1 className="text-2xl font-bold cursor-pointer">AETB</h1>
           </Link>
           <div className="hidden md:flex gap-6 pr-16 ml-auto">
             <Link href="https://discord.gg/aetb">
-              <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
+              <button className="text-gray-400 text-sm font-bold active:scale-90 duration-300 hover:text-gray-500">
                 Discord
               </button>
             </Link>
             <Link href="/changelog">
-              <button className="text-gray-400 text-lg font-bold active:scale-90 duration-300 hover:text-gray-500">
+              <button className="text-gray-400 text-sm font-bold active:scale-90 duration-300 hover:text-gray-500">
                 Changelogs
               </button>
             </Link>
             <button
               type="button"
               onClick={openModal}
-              className="bg-blue-600 h-9 w-24 hover:bg-blue-700 p-2 rounded transform active:scale-90 duration-300"
+              className="bg-blue-600 h-9 w-24 hover:bg-blue-700 p-1 text-sm font-semibold rounded transform active:scale-90 duration-300"
             >
               Buy Now
             </button>
